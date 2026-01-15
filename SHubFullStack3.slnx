@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="Konu01Degiskenler/Konu01Degiskenler.csproj" />
+  <Project Path="Konu02TipDonusumleri/Konu02TipDonusumleri.csproj" Id="6117e864-d151-4a14-9d19-bdb9512e6658" />
+  <Project Path="Konu03Operatorler/Konu03Operatorler.csproj" Id="54218e29-931b-4bb7-9139-b431833d1c3e" />
+  <Project Path="Konu04KararYapilari/Konu04KararYapilari.csproj" Id="303a0a61-0f58-4c76-953b-dcd42212656b" />
+  <Project Path="Konu05Metotlar/Konu05Metotlar.csproj" Id="7a49a6f6-3993-434b-893e-52fb48f7eb74" />
+  <Project Path="Konu06Diziler/Konu06Diziler.csproj" Id="4dd5e67c-c5ff-4658-a28b-24ab5822110f" />
+  <Project Path="Konu07Donguler/Konu07Donguler.csproj" Id="cc382e5c-218c-41f5-8d9b-e93e0f1b56be" />
+  <Project Path="Konu08SiniflarClasses/Konu08SiniflarClasses.csproj" Id="8ac59103-d607-4eaf-9691-040b222d1795" />
+</Solution>
