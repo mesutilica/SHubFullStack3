@@ -82,6 +82,47 @@
                 Console.WriteLine("Giriş Başarısız!");
             }
             #endregion
+
+            #region Örnek 3
+
+            Araba araba = new()
+            {
+                Id = 1,
+                Marka = "Togg",
+                KasaTipi = "Suv",
+                Model = "T10x",
+                Renk = "Kırmızı",
+                ModelYili = 2025
+            };
+
+            Araba araba2 = new()
+            {
+                Id = 2,
+                Marka = "Togg",
+                KasaTipi = "Sedan",
+                Model = "T10F",
+                Renk = "Beyaz",
+                ModelYili = 2023
+            };
+            #endregion
+
+            #region Örnek 4
+            Kategori kategori = new()
+            {
+                Id = 3, KategoriAdi = "Elektronik"
+            };
+            Kategori kategori2 = new()
+            {
+                Id = 4, KategoriAdi = "Bilgisayar"
+            };
+            Kategori kategori3 = new()
+            {
+                Id = 5, KategoriAdi = "Telefon"
+            };
+            Console.WriteLine();
+            Console.WriteLine($"Anasayfa Hakkımızda {kategori.KategoriAdi} {kategori2.KategoriAdi} {kategori3.KategoriAdi} İletişim");
+
+            #endregion
         }
     }
     class Kullanici
