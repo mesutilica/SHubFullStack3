@@ -26,5 +26,7 @@ namespace Konu08SiniflarClasses
         {
             return sayi1 + sayi2;
         }
+        public static string StatikDegisken = "Sınıfta Statik Degisken Kullanımı";
+        public string DinamikDegisken = "Dinamik Değisken";
     }
 }
