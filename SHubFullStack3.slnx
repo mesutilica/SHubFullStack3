@@ -9,4 +9,6 @@
   <Project Path="Konu08SiniflarClasses/Konu08SiniflarClasses.csproj" Id="8ac59103-d607-4eaf-9691-040b222d1795" />
   <Project Path="Konu09StructYapilar/Konu09StructYapilar.csproj" Id="3eb6dbb3-9e6b-4d10-b377-1f4a3dd18372" />
   <Project Path="Konu10StringSinifi/Konu10StringSinifi.csproj" Id="a9239d98-2527-454d-9a69-f5570a6c4ba1" />
+  <Project Path="Konu11Enumlar/Konu11Enumlar.csproj" Id="216270ab-6573-4518-bf99-2359afbdde38" />
+  <Project Path="Konu12KalitimInheritance/Konu12KalitimInheritance.csproj" Id="9381120f-34d3-433b-983b-8d53fa614f9a" />
 </Solution>
