@@ -44,6 +44,81 @@
             otomobil.Marka = "Togg";
             otomobil.Model = "T10x";
             Console.WriteLine("otomobil.AracTuru: " + otomobil.AracTuru);
+
+            Console.WriteLine();
+
+            Kategori kategori = new()
+            {
+                Id = 1,
+                Name = "Elektronik",
+                UstMenudeGoster = true,
+            };
+            if (kategori.UstMenudeGoster == true)
+            {
+                Console.WriteLine("Kategori Adı: " + kategori.Name);
+            }
+
+            Console.WriteLine();
+
+            Urun urun = new()
+            {
+                Id = 1,
+                Name = "Klavye",
+                Fiyat = 999,
+                Kdv = 20
+            };
+
+            Console.WriteLine("Ürün Bilgileri:");
+            Console.WriteLine("Ürün Adı: " + urun.Name);
+            Console.WriteLine("Ürün Fiyatı: " + urun.Fiyat);
+            Console.WriteLine("Kdv: %" + urun.Kdv);
+            decimal kdvOrani = 0.20m;
+            decimal kdvTutari = urun.Fiyat * kdvOrani;
+            decimal toplamFiyat = urun.Fiyat + kdvTutari;
+            Console.WriteLine("Kdv Tutarı: " + kdvTutari + " TL");
+            Console.WriteLine("Toplam Tutar: " + toplamFiyat + " TL");
+
+            Console.WriteLine();
+
+            Cizici[] birCizici = new Cizici[4];
+            birCizici[0] = new DogruCiz();
+            birCizici[1] = new DaireCiz();
+            birCizici[2] = new KareCiz();
+            birCizici[3] = new Cizici();
+
+            foreach (var item in birCizici)
+            {
+                item.Ciz();
+            }
+        }
+    }
+    // Polimorfizm - Çok biçimlilik
+    public class Cizici
+    {
+        public virtual void Ciz()// virtual keywordü ile bu metodu override-ezilebilir hale getiriyoruz
+        {
+            Console.WriteLine("Cizici");
+        }
+    }
+    public class DogruCiz : Cizici
+    {
+        public override void Ciz()
+        {
+            Console.WriteLine("Düz Çizgi");
+        }
+    }
+    public class DaireCiz : Cizici
+    {
+        public override void Ciz()
+        {
+            Console.WriteLine("Daire Çizgi");
+        }
+    }
+    public class KareCiz : Cizici
+    {
+        public override void Ciz()
+        {
+            Console.WriteLine("Kare Çizgi");
         }
     }
 }

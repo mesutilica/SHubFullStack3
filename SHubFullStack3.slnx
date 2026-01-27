@@ -11,4 +11,5 @@
   <Project Path="Konu10StringSinifi/Konu10StringSinifi.csproj" Id="a9239d98-2527-454d-9a69-f5570a6c4ba1" />
   <Project Path="Konu11Enumlar/Konu11Enumlar.csproj" Id="216270ab-6573-4518-bf99-2359afbdde38" />
   <Project Path="Konu12KalitimInheritance/Konu12KalitimInheritance.csproj" Id="9381120f-34d3-433b-983b-8d53fa614f9a" />
+  <Project Path="Konu13KapsullemeEncapsulation/Konu13KapsullemeEncapsulation.csproj" Id="9ff2b670-f098-45f0-b36c-c5302699b88f" />
 </Solution>
