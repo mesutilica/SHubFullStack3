@@ -46,6 +46,31 @@
             arayuz.Topla();
             arayuz.Goster();
             Console.WriteLine("Toplama sonucu: " + arayuz.ToplamaYap());
+
+            Console.WriteLine();
+
+            Kategori kategori = new Kategori()
+            {
+                Id = 1,
+                Name = "Elektronik",
+                IsActive = true
+            };
+
+            Console.WriteLine("Kategori");
+            Console.WriteLine(kategori.Name);
+
+            Console.WriteLine();
+
+            Urun urun = new Urun()
+            {
+                Id = 1,
+                Name = "Ayfon Çift Sim Cep Telefonu",
+                IsActive = true,
+                Price = 18000
+            };
+            Console.WriteLine("Ürün Bilgileri:");
+            Console.WriteLine(urun.Name);
+            Console.WriteLine(urun.Price + " TL");
         }
     }
 }
