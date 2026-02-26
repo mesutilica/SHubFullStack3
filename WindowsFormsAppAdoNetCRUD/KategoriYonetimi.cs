@@ -16,5 +16,25 @@ namespace WindowsFormsAppAdoNetCRUD
         {
             InitializeComponent();
         }
+        CategoryDAL dAL = new CategoryDAL();
+        private void KategoriYonetimi_Load(object sender, EventArgs e)
+        {
+            Yukle();
+        }
+        void Yukle()
+        {
+            dgvKategoriler.DataSource = dAL.GetDataTable("select * from categories");
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            var kategori = new Category
+            {
+                CreateDate = DateTime.Now,
+                Name = txtKategoriAdi.Text,
+                Description = txtAciklama.Text,
+                IsActive = cbDurum.Checked,
+            };
+        }
     }
 }

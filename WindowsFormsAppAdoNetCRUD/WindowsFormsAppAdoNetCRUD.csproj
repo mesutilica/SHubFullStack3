@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="CategoryDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,7 @@
     <Compile Include="KategoriYonetimi.Designer.cs">
       <DependentUpon>KategoriYonetimi.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrtakDAL.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
