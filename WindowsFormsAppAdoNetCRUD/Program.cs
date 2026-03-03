@@ -13,7 +13,7 @@ namespace WindowsFormsAppAdoNetCRUD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KategoriYonetimi());
+            Application.Run(new UrunYonetimi()); //KategoriYonetimi // Form1
         }
     }
 }
