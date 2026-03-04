@@ -60,6 +60,13 @@
     <Compile Include="KategoriYonetimi.Designer.cs">
       <DependentUpon>KategoriYonetimi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullaniciDAL.cs" />
+    <Compile Include="KullaniciYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciYonetimi.Designer.cs">
+      <DependentUpon>KullaniciYonetimi.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrtakDAL.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KategoriYonetimi.resx">
       <DependentUpon>KategoriYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciYonetimi.resx">
+      <DependentUpon>KullaniciYonetimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
