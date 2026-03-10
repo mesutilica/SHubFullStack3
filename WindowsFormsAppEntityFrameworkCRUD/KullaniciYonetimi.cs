@@ -102,7 +102,20 @@ namespace WindowsFormsAppEntityFrameworkCRUD
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+            var id = (int)dgvKullanicilar.CurrentRow.Cells["Id"].Value; // seçilen kaydın id si
+            var kayit = context.Users.Find(id); // db den kaydı bul
+            context.Users.Remove(kayit); // kaydı silinecek olarak işaretle
+            // değişiklikleri db ye işle
+            var sonuc = context.SaveChanges();
+            if (sonuc > 0)
+            {
+                Yukle();
+                MessageBox.Show("Kayıt Silme Başarılı!");
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Silme Başarısız!");
+            }
         }
     }
 }
