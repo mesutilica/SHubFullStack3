@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CssEgitimi\Css-01-giris.html" />
+    <Content Include="CssEgitimi\Css-02-arkaplanlar.html" />
+    <Content Include="CssEgitimi\Css-03-margin-padding.html" />
+    <Content Include="CssEgitimi\Css-04-genislik-yukseklik.html" />
+    <Content Include="CssEgitimi\Css-05-display-ozelligi.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Resimler\google.jpg" />
