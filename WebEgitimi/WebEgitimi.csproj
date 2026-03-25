@@ -75,9 +75,12 @@
     <Content Include="CssEgitimi\Css-06-position-ozelligi.html" />
     <Content Include="CssEgitimi\Css-07-float-ozelligi.html" />
     <Content Include="Global.asax" />
+    <Content Include="HtmlCssFlexPage.html" />
     <Content Include="HtmlCssPage.html" />
     <Content Include="HtmlPage.html" />
     <Content Include="index.html" />
+    <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
+    <Content Include="JavascriptEgitimi\Konu02Operatorler.html" />
     <Content Include="Resimler\google.jpg" />
     <Content Include="stil.css" />
     <Content Include="Web.config" />
