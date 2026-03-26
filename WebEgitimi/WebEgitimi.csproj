@@ -81,6 +81,10 @@
     <Content Include="index.html" />
     <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
     <Content Include="JavascriptEgitimi\Konu02Operatorler.html" />
+    <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
+    <Content Include="JavascriptEgitimi\Konu04Donguler.html" />
+    <Content Include="JavascriptEgitimi\Konu05Fonksiyonlar.html" />
+    <Content Include="JavascriptEgitimi\Konu06StringMetotlari.html" />
     <Content Include="Resimler\google.jpg" />
     <Content Include="stil.css" />
     <Content Include="Web.config" />
