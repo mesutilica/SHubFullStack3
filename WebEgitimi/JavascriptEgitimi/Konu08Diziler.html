@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Konu08 Diziler</title>
+</head>
+<body>
+    <h1>Konu08 Diziler</h1>
+    <script>
+        var sayilar = [3, 5, 7, 9]
+        var toplam = 0
+        for (var i in sayilar) {
+            toplam += sayilar[i]
+            document.write("i nin değeri " + i + " sayilar[i] : " + sayilar[i], "<br>")
+        }
+        document.write("toplamın değeri: " + toplam + "<hr>")
+
+        for (var i of sayilar) { // bu döngü c# daki foreach gibi çalışır
+            document.write("i nin değeri " + i, "<br>")
+        }
+
+        document.write("<hr>")
+    </script>
+</body>
+</html>
