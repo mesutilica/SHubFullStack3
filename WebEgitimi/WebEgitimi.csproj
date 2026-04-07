@@ -91,6 +91,7 @@
     <Content Include="JavascriptEgitimi\Konu10-JquerySeciciler.html" />
     <Content Include="JavascriptEgitimi\Konu11-Jquery-Html.html" />
     <Content Include="JavascriptEgitimi\Konu12-Jquery-Css.html" />
+    <Content Include="JavascriptEgitimi\Konu13-Jquery-DOM.html" />
     <Content Include="Resimler\google.jpg" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
