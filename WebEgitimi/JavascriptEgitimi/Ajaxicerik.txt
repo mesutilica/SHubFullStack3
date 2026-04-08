@@ -1,0 +1,7 @@
+<h1>Konu15-Jquery-Ajax</h1>
+    <p>
+        AJAX, İnternet sayfalarında JavaScript ve XMLHttpRequest kullanımı ile etkileşimli uygulamalar oluşturmamızı sağlayan yönetimin adıdır.
+    </p>
+    <p>
+        AJAX uygulamalarımızda hızlanmaya ve veri kullanımını azaltmaya yardımcı olur.
+    </p>

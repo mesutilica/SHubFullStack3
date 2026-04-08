@@ -111,6 +111,44 @@
     <div id="iletisim" class="brd" style="display:none">
         İletişim tab içeriği
     </div>
+    <script>
+        $("#hakkimizdaLink").on("click", function () {
+            $("#anasayfa").hide()
+            $("#hakkimizda").show()
+            $("#urunlerimiz").hide()
+            $("#iletisim").hide()
+        });
+        $("#urunlerimizLink").on("click", function () {
+            $("#anasayfa").hide()
+            $("#hakkimizda").hide()
+            $("#urunlerimiz").show()
+            $("#iletisim").hide()
+        });
+    </script>
 
+    <hr />
+
+    <h2>Jquery ile Change Olayını Yakalama</h2>
+    <input type="text" id="degisim" value="" />
+    <h3 id="jqchange" class="baslik"></h3>
+
+    <h4>Kategoriler</h4>
+    <select class="degisim">
+        <option value="">Seçiniz</option>
+        <option value="Elektronik">Elektronik</option>
+        <option value="Bilgisayar">Bilgisayar</option>
+        <option value="Telefon">Telefon</option>
+    </select>
+    <script>
+        $(".degisim").on("change", function () {
+            $("#jqchange").html($(this).val())
+        });
+        $("#degisim").change(function () {
+            $("#jqchange").text($(this).val())
+        });
+        $("#degisim").on("keyup", function () {
+            $("#jqchange").html($(this).val())
+        });
+    </script>
 </body>
 </html>
