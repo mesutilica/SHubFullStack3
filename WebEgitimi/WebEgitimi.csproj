@@ -72,6 +72,11 @@
     <Content Include="BootstrapEgitimi\Ders03Hizalama.html" />
     <Content Include="BootstrapEgitimi\Ders04Siralamaveittirme.html" />
     <Content Include="BootstrapEgitimi\Ders05MarginPadding.html" />
+    <Content Include="BootstrapEgitimi\Ders06Olculendirme.html" />
+    <Content Include="BootstrapEgitimi\Ders07FormElementleri.html" />
+    <Content Include="BootstrapEgitimi\Ders08Alerts.html" />
+    <Content Include="BootstrapEgitimi\Ders09RenkClasslari.html" />
+    <Content Include="BootstrapEgitimi\Ders10Listeler.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
