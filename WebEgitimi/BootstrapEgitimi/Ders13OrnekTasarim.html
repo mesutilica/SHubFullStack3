@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Örnek Sayfa  Tasarımı</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <main class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ürünlerimiz
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Yemek Odaları</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Yatak Odaları</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Oturma Grupları</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-disabled="true">İletişim</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Ara" name="ara" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Ara</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/Resimler/kampanya1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Resimler/kampanya2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Resimler/kampanya3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <h1 class="text-center mt-3">Popüler Kategoriler</h1>
+
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://www.evgor.com.tr/Data/BlockUploadData/banner/img1/561/koltuk-tr-1.webp?1775749636" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Koltuk Takımları</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://www.evgor.com.tr/Data/BlockUploadData/banner/img1/561/yemek-tr-2.webp?1779292072" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Yemek Odaları</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://www.evgor.com.tr/Data/BlockUploadData/banner/img1/561/yatak-4-tr-3.webp?1779292072" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Yatak Odaları</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://www.evgor.com.tr/Data/BlockUploadData/banner/img1/561/tv-5-1-tr-4.webp?1779292072" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">TV Üniteleri</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="px-4 pt-5 my-5 text-center border-bottom">
+                <h1 class="display-4 fw-bold text-body-emphasis">
+                    Evgör Mobilya
+                </h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">
+                        Eviniz için en güzl yemek odası, yatak odası ve oturma grupları burada.
+                    </p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+                            Kampanyalı Ürünler
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+                            Luxury Modeller
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-hidden" style="max-height: 30vh;">
+                    <div class="container px-5">
+                        <img src="https://www.evgor.com.tr/Data/BlockUploadData/banner/img1/561/ev-dekorasyonu-tr-6.webp?1779292072" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>KURUMSAL</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Anasayfa</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Hakkımızda</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Kariyer</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Sık Sorulan Sorular</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Sertifikalarımız</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>KATEGORİLER</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Köşe Koltuk Takımları</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Yatak Odaları</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Yemek Odaları</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Koltuk Takımları</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">TV Üniteleri</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>YARDIM</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Bize Ulaşın</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Güvenli Alışveriş</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Neden Biz</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Kullanım Koşulları</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">KVKK ve Aydınlatma Metni</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5>E Bültene Abone Ol</h5>
+                            <p>İndirim ve Fırsatlardan Yararlan.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email</label>
+                                <input id="newsletter1" type="email" class="form-control" placeholder="Email">
+                                <button class="btn btn-primary" type="button">AboneOl</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2026 Evgör Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.instagram.com/evgormobilya/" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.facebook.com/evgormobilya" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://twitter.com/evgorcomtr" aria-label="X">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.youtube.com/user/evgormobilya" aria-label="youtube">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://tr.linkedin.com/company/evgor-mobilya" aria-label="linkedin">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+
+    </main>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
