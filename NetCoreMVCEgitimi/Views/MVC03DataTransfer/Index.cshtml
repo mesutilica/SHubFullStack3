@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "MVC03 Data Transfer";
+}
+
+<h2>MVC03 Data Transfer</h2>
+
+<h3>
+    @ViewBag.UrunKategorisi Ürünleri
+</h3>
+
+<table class="table">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewBag.Urunler)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>@TempData["UrunBilgi"]</caption>
+</table>
+
+<hr />
+
+<table class="table table-striped">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewData["Urunler"] as List<Urun>)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>@TempData["UrunBilgi"]</caption>
+</table>
+
+<hr />
+
+<h2>MVC de View dan Controller a Veri Gönderme</h2>
+
+<h3>
+    1-Get Metoduyla Veri Gönderme
+</h3>
+
+<form action="/MVC03DataTransfer/Search" method="get">
+    <input type="text" name="txtAra" value="" placeholder="Ara" />
+</form>
