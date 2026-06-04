@@ -25,8 +25,44 @@ namespace NetCoreMVCEgitimi.Controllers
             return View();
         }
         [HttpGet]// attribute : Dikkat! bir metodun üzerinde attribute yoksa varsayılan tür Get dir!
-        public IActionResult Search()
+        public IActionResult Search(string txtAra)
         {
+            ViewBag.GetVerisi = txtAra; // querystring deki txtAra yapısının değerini getir.
+            return View();
+        }
+        [HttpPost] // aşağıdaki method view dan gelecek post isteğinde çalışır, get de çalışmaz!
+        public IActionResult Index(string txtUrunAdi, string ddlKategori, string rbOnay, bool cbOnay, IFormCollection formCollection)
+        {
+            var urunListesi = new List<Urun>
+            {
+                new Urun() { Adi = "Oyun Bilgisayarı", Fiyati = 49000, Stok = 5 },
+                new Urun() { Adi = "Laptop", Fiyati = 29000, Stok = 7 },
+                new Urun() { Adi = "İş İstasyonu", Fiyati = 99000, Stok = 3 }
+            };
+            ViewData["Urunler"] = urunListesi;
+
+            ViewBag.Baslik1 = "1. Yöntem Parametreyle Veri Yakalama";
+            ViewBag.Mesaj1 = "Textbox değeri : " + txtUrunAdi;
+            ViewBag.Mesaj2 = "Dropdown değeri : " + ddlKategori;
+            ViewBag.Mesaj3 = "cbOnay değeri : " + cbOnay;
+            ViewBag.Mesaj3 += " - rbOnay değeri : " + rbOnay;
+
+            ////
+
+            ViewBag.Baslik2 = "2. Yöntem FormCollection İle Yakalama";
+            ViewBag.Mesaj4 = "Textbox değeri : " + formCollection["txtUrunAdi"];
+            ViewBag.Mesaj5 = "Dropdown değeri : " + formCollection["ddlKategori"];
+            ViewBag.Mesaj6 = "cbOnay değeri : " + formCollection["cbOnay"][0];
+            ViewBag.Mesaj6 += " - rbOnay değeri : " + formCollection["rbOnay"][0];
+
+            /////
+
+            ViewBag.Baslik3 = "3. Yöntem Request Form İle Yakalama";
+            ViewBag.Mesaj7 = "Textbox değeri : " + Request.Form["txtUrunAdi"];
+            ViewBag.Mesaj8 = "Dropdown değeri : " + Request.Form["ddlKategori"];
+            ViewBag.Mesaj9 = "cbOnay değeri : " + Request.Form["cbOnay"][0];
+            ViewBag.Mesaj9 += " - rbOnay değeri : " + Request.Form["rbOnay"][0];
+
             return View();
         }
     }

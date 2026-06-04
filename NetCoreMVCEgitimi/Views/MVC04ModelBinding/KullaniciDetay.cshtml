@@ -1,0 +1,68 @@
+﻿@model Kullanici
+@{
+    ViewBag.Title = "Kullanici Detay";
+}
+
+<h2>Kullanici Detay</h2>
+
+<table class="table">
+    <tr>
+        <td>Ad</td>
+        <td>@Model.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Model.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Kullanıcı Adı</td>
+        <td>@Model.KullaniciAdi</td>
+    </tr>
+    <tr>
+        <td>Şifre</td>
+        <td>@Model.Sifre</td>
+    </tr>
+</table>
+
+<h3>
+    Model içerisinden gelen verileri düzenleme
+</h3>
+
+<form action="/MVC04ModelBinding/KullaniciDetay" method="post">
+    <table class="table">
+        <tr>
+            <td>Ad</td>
+            <td>
+                @Html.TextBoxFor(model => model.Ad)
+            </td>
+        </tr>
+        <tr>
+            <td>Soyad</td>
+            <td>
+                @Html.TextBoxFor(model => model.Soyad)
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>Kullanıcı Adı</td>
+            <td>@Html.TextBoxFor(model => model.KullaniciAdi)</td>
+        </tr>
+        <tr>
+            <td>Şifre</td>
+            <td>@Html.EditorFor(model => model.Sifre)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Kaydet" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>
