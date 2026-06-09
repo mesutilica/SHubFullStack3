@@ -32,5 +32,29 @@ namespace NetCoreMVCEgitimi.Controllers
             var model = new Adres() { Ilce = "Kartal", Sehir = "İstanbul", AcikAdres = "Gül sk. No: 18 Atalar" };
             return View(model);
         }
+        [HttpPost] // post olunca çalış
+        public ActionResult AdresDetay(Adres adres)
+        {
+            // işlemler yapılır
+            return View(adres);
+        }
+        public IActionResult KullaniciAdresDetay()
+        {
+            var kullanici = new Kullanici()
+            {
+                Ad = "Murat",
+                Soyad = "Yılmaz",
+                Email = "murat@yilmaz.co",
+                KullaniciAdi = "murat",
+                Sifre = "123"
+            };
+
+            var model = new UyeSayfasiViewModel
+            {
+                Kullanici = kullanici,
+                Adres = new Adres() { Ilce = "Kartal", Sehir = "İstanbul", AcikAdres = "Gül sk. No: 18 Atalar" }
+            };
+            return View(model);
+        }
     }
 }
