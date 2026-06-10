@@ -19,6 +19,7 @@
   <Project Path="Konu18SOLIDPrensipleri/Konu18SOLIDPrensipleri.csproj" Id="240cad9f-848c-4263-9274-b5fae246bcad" />
   <Project Path="NetCoreMVCEgitimi/NetCoreMVCEgitimi.csproj" Id="30c816c3-26b6-4655-912a-09c35691f4ca" />
   <Project Path="NetFrameworkMVCEgitimi/NetFrameworkMVCEgitimi.csproj" Id="98e38da6-e12f-4a1b-b13a-f8750687c38d" />
+  <Project Path="WebApplication1/WebApplication1.csproj" Id="14eb446c-ee69-4c67-a73a-d29949ee4b59" />
   <Project Path="WebEgitimi/WebEgitimi.csproj" Id="8555d1a0-26e3-4bfb-8dc6-1497e7d46139" />
   <Project Path="WindowsFormsAppAdoNetCRUD/WindowsFormsAppAdoNetCRUD.csproj" Id="8687350e-da9a-4bac-99b6-58f316623156" />
   <Project Path="WindowsFormsAppEntityFrameworkCRUD/WindowsFormsAppEntityFrameworkCRUD.csproj" Id="5902f1d2-821b-4074-85ac-ecee6a832480" />
