@@ -46,5 +46,22 @@ namespace NetCoreMVCEgitimi.Controllers
             var kullanicilar = db.Uyeler.ToList();
             return Json(kullanicilar);
         }
+        public ContentResult XmlContentResult()
+        {
+            var kullanicilar = db.Uyeler.ToList();
+            var xml = "<kullanicilar>";
+            foreach (var item in kullanicilar)
+            {
+                xml += $@"<kullanici>
+                            <Id>{item.Id}</Id>
+                            <Ad>{item.Ad}</Ad>
+                            <Soyad>{item.Soyad}</Soyad>
+                            <KullaniciAdi>{item.KullaniciAdi}</KullaniciAdi>
+                            <Email>{item.Email}</Email>
+                          </kullanici>";
+            }
+            xml += "</kullanicilar>";
+            return Content(xml, "application/xml"); // geriye xml formatında veri döndürür
+        }
     }
 }
