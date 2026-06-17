@@ -28,7 +28,30 @@ namespace NetCoreMVCEgitimi.Controllers
             {
                 TempData["Mesaj"] = @"<div class='alert alert-danger'>Giriş Başarısız!</div>";
             }
+            return View("Index");
+        }
+        public IActionResult CookieOku()
+        {
+            if (HttpContext.Request.Cookies["username"] == null || HttpContext.Request.Cookies["userguid"] == null)
+            {
+                TempData["Mesaj"] = @"<div class='alert alert-danger'>Lütfen Giriş Yapınız!</div>";
+                return RedirectToAction("Index");
+            }
+            TempData["kullaniciAdi"] = HttpContext.Request.Cookies["username"];
+            TempData["kullaniciguid"] = HttpContext.Request.Cookies["userguid"];
             return View();
+        }
+        public IActionResult CookieSil()
+        {
+            if (HttpContext.Request.Cookies["username"] != null)
+            {
+                HttpContext.Response.Cookies.Delete("username");
+            }
+            if (HttpContext.Request.Cookies["userguid"] != null)
+            {
+                HttpContext.Response.Cookies.Delete("userguid");
+            }
+            return RedirectToAction("CookieOku");
         }
     }
 }

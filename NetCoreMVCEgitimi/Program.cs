@@ -9,6 +9,7 @@ namespace NetCoreMVCEgitimi
             // Add services to the container.
             builder.Services.AddControllersWithViews(); // Uygulamada MVC controller view yapısını kullanacağız
             builder.Services.AddDbContext<Models.UyeContext>(); // uygulamada DbContext yapısını kullanacağız
+            builder.Services.AddSession(); // uygulamada session kullanımını aktif et
 
             var app = builder.Build(); // çalışacak olan uygulama örneği
 
@@ -24,6 +25,8 @@ namespace NetCoreMVCEgitimi
             app.UseRouting();// Uygulamada Routing mekanizmasını aktif et
 
             app.UseAuthorization();// Uygulamada yetkilendirme kullanımını aktif et
+
+            app.UseSession(); // uygulamada session kullanımını aktif et
 
             app.MapStaticAssets();// Uygulamada statik doyalar(wwwroot içerisindekiler) kullanılabilsin
             app.MapControllerRoute(
