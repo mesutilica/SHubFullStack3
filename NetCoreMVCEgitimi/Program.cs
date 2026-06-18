@@ -1,3 +1,6 @@
+
+using Microsoft.AspNetCore.Authentication.Cookies; // çerez tabanlı kimlik doğrulama için gerekli namespace
+
 namespace NetCoreMVCEgitimi
 {
     public class Program
@@ -10,6 +13,14 @@ namespace NetCoreMVCEgitimi
             builder.Services.AddControllersWithViews(); // Uygulamada MVC controller view yapısını kullanacağız
             builder.Services.AddDbContext<Models.UyeContext>(); // uygulamada DbContext yapısını kullanacağız
             builder.Services.AddSession(); // uygulamada session kullanımını aktif et
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) // çerez tabanlı kimlik doğrulama kullanacağımızı belirtiyoruz
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/MVC15FiltersUsing/Login"; // kullanıcı login değilse yönlendirilecek sayfa
+                    options.LogoutPath = "/MVC15FiltersUsing/Logout"; // kullanıcı logout olduğunda yönlendirilecek sayfa
+                    options.AccessDeniedPath = "/MVC15FiltersUsing/AccessDenied"; // kullanıcı yetkisiz bir sayfaya erişmeye çalışırsa yönlendirilecek sayfa
+                });
 
             var app = builder.Build(); // çalışacak olan uygulama örneği
 
