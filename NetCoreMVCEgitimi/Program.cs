@@ -40,6 +40,13 @@ namespace NetCoreMVCEgitimi
             app.UseSession(); // uygulamada session kullanımını aktif et
 
             app.MapStaticAssets();// Uygulamada statik doyalar(wwwroot içerisindekiler) kullanılabilsin
+
+            // area kullanabilmek için aşağıdaki kodu yazdık
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{area=exists}/{controller=Main}/{action=Index}/{id?}")
+                .WithStaticAssets();
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
