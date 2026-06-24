@@ -19,8 +19,10 @@
 
 	<ItemGroup>
 	  <Folder Include="Areas\Admin\Models\" />
+	  <Folder Include="Areas\ApiKullanimi\Models\" />
 	  <Folder Include="Areas\Blog\Data\" />
 	  <Folder Include="Areas\Blog\Models\" />
+	  <Folder Include="Views\Shared\Components\" />
 	  <Folder Include="wwwroot\Images\" />
 	</ItemGroup>
 
