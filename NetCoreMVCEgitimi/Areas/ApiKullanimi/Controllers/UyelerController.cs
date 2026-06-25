@@ -1,21 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NetCoreMVCEgitimi.Models;
 
 namespace NetCoreMVCEgitimi.Areas.ApiKullanimi.Controllers
 {
     [Area("ApiKullanimi")]
     public class UyelerController : Controller
     {
-        // GET: UyelerController
-        public ActionResult Index()
+        private readonly HttpClient _httpClient;
+        string _url = "https://localhost:7296/api/uyeler/";
+
+        public UyelerController(HttpClient httpClient)
         {
-            return View();
+            _httpClient = httpClient;
+        }
+
+        // GET: UyelerController
+        public async Task<ActionResult> Index()
+        {
+            var model = await _httpClient.GetFromJsonAsync<List<Uye>>(_url); // api den çektiğin json üye listesini modele dönüştürüp ekrana yolla.
+            return View(model);
         }
 
         // GET: UyelerController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> DetailsAsync(int id)
         {
-            return View();
+            var model = await _httpClient.GetFromJsonAsync<Uye>(_url + id);
+            return View(model);
         }
 
         // GET: UyelerController/Create
@@ -27,58 +38,77 @@ namespace NetCoreMVCEgitimi.Areas.ApiKullanimi.Controllers
         // POST: UyelerController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Uye collection)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    var response = await _httpClient.PostAsJsonAsync(_url, collection); // api ye post isteği göndermek için kullandığımız method.
+                    if (response.IsSuccessStatusCode) // post metodu cevap olarak geriye değer döndürüyor.
+                        return RedirectToAction(nameof(Index)); // eğer api den başarılı kodu dönmüşse
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Hata Oluştu!");
+                }
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(collection);
         }
 
         // GET: UyelerController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> EditAsync(int id)
         {
-            return View();
+            var model = await _httpClient.GetFromJsonAsync<Uye>(_url + id);
+            return View(model);
         }
 
         // POST: UyelerController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> EditAsync(int id, Uye collection)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    var response = await _httpClient.PutAsJsonAsync(_url + id, collection);
+                    if (response.IsSuccessStatusCode) //  metod cevap olarak geriye değer döndürüyor.
+                        return RedirectToAction(nameof(Index)); // eğer api den başarılı kodu dönmüşse
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Hata Oluştu!");
+                }
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(collection);
         }
 
         // GET: UyelerController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
-            return View();
+            var model = await _httpClient.GetFromJsonAsync<Uye>(_url + id);
+            return View(model);
         }
 
         // POST: UyelerController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> DeleteAsync(int id, Uye collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var response = await _httpClient.DeleteAsync(_url + id);
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                ModelState.AddModelError("", "Hata Oluştu!");
             }
+            return View(collection);
         }
     }
 }
